@@ -1,0 +1,35 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+  d_etc:
+    src: local/etc
+    dst: ~/.local/etc
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
+  f_gitignore_global:
+    src: gitignore_global
+    dst: ~/.gitignore_global
+  d_karabiner:
+    src: config/karabiner
+    dst: ~/.config/karabiner
+profiles:
+  comm:
+    dotfiles:
+      - f_zshrc
+      - d_etc
+      - f_gitconfig
+      - f_gitignore_global
+  mac:
+    include:
+      - comm
+    dotfiles:
+      - d_karabiner
+  linux:
+    include:
+      - comm
