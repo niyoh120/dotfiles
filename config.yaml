@@ -1,35 +1,65 @@
 config:
   backup: true
+  banner: false
   create: true
   dotpath: dotfiles
+variables:
+  LINUX_LEGACY: false
 dotfiles:
   f_zshrc:
     src: zshrc
     dst: ~/.zshrc
-  d_etc:
-    src: local/etc
-    dst: ~/.local/etc
-  f_gitconfig:
-    src: gitconfig
-    dst: ~/.gitconfig
+  d_shell:
+    src: local/etc/shell
+    dst: ~/.local/etc/shell
   f_gitignore_global:
     src: gitignore_global
     dst: ~/.gitignore_global
   d_karabiner:
     src: config/karabiner
     dst: ~/.config/karabiner
+    upignore:
+      - "automatic_backups"
+  f_tmux.conf:
+    src: tmux.conf
+    dst: ~/.tmux.conf
+  d_git:
+    src: config/git
+    dst: ~/.config/git
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
+  f_tmux.remote.conf:
+    src: tmux/tmux.remote.conf
+    dst: ~/.tmux/tmux.remote.conf
+  d_iterm2:
+    src: config/iterm2
+    dst: ~/.config/iterm2
+  f_clang-format:
+    src: clang-format
+    dst: ~/.clang-format
 profiles:
   comm:
     dotfiles:
-      - f_zshrc
-      - d_etc
-      - f_gitconfig
-      - f_gitignore_global
+    - f_zshrc
+    - d_shell
+    - f_gitignore_global
+    - d_git
+    - f_gitconfig
+    - f_tmux.conf
+    - f_tmux.remote.conf
+    - f_clang-format
   mac:
     include:
       - comm
     dotfiles:
       - d_karabiner
+      - d_iterm2
   linux:
     include:
       - comm
+  linux_legacy:
+    include:
+      - linux
+    variables:
+      LINUX_LEGACY: true

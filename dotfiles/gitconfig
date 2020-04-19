@@ -1,8 +1,7 @@
-[user]
-	name = niyoh
-	email = zhrh120@gmail.com
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+[core]
+	excludesfile = ~/.gitignore_global
+
+[include]
+	path = ~/.config/git/user.inc
+	path = ~/.config/git/proxy.inc
+	path = ~/.config/git/tool.inc

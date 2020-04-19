@@ -77,10 +77,9 @@ CMakeCache.txt
 CMakeFiles
 CMakeScripts
 Testing
-Makefile
+compile_commands.json
 cmake_install.cmake
 install_manifest.txt
-compile_commands.json
 CTestTestfile.cmake
 _deps
 
@@ -319,9 +318,26 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
+# build
+build
+Build
+release
+Release
+
+# protobuf
+*.pb.*
 
 # vscode
 .vscode
+
+# clangd
+.clangd
+compile_commands.json
+
+# ccls
+.ccls-cache
+.ccls
+compile_commands.json
 
 # jetbrain
 .idea
