@@ -341,3 +341,8 @@ compile_commands.json
 
 # jetbrain
 .idea
+
+# clion
+cmake-*
+
+.temp

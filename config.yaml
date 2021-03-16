@@ -19,7 +19,7 @@ dotfiles:
     src: config/karabiner
     dst: ~/.config/karabiner
     upignore:
-      - "automatic_backups"
+    - automatic_backups
   f_tmux.conf:
     src: tmux.conf
     dst: ~/.tmux.conf
@@ -29,12 +29,13 @@ dotfiles:
   f_gitconfig:
     src: gitconfig
     dst: ~/.gitconfig
+    chmod: '600'
   f_tmux.remote.conf:
     src: tmux/tmux.remote.conf
     dst: ~/.tmux/tmux.remote.conf
-  d_iterm2:
-    src: config/iterm2
-    dst: ~/.config/iterm2
+  f_iterm2:
+    src: config/iterm2/com.googlecode.iterm2.plist
+    dst: ~/.config/iterm2/com.googlecode.iterm2.plist
   f_clang-format:
     src: clang-format
     dst: ~/.clang-format
@@ -51,15 +52,15 @@ profiles:
     - f_clang-format
   mac:
     include:
-      - comm
+    - comm
     dotfiles:
-      - d_karabiner
-      - d_iterm2
+    - d_karabiner
+    - f_iterm2
   linux:
     include:
-      - comm
+    - comm
   linux_legacy:
     include:
-      - linux
+    - linux
     variables:
       LINUX_LEGACY: true

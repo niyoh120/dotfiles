@@ -52,9 +52,6 @@ function unset-proxy() {
 
 [ -e "$TEMP_PRE_CONF" ] && source "$TEMP_PRE_CONF"
 
-push_front_path "/bin"
-push_front_path "/usr/sbin"
-push_front_path "/usr/bin"
 push_front_path "/usr/local/sbin"
 push_front_path "/usr/local/bin"
 push_front_path "$LOCAL_BIN"

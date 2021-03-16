@@ -27,6 +27,7 @@ function source_modules() {
 
 source_module pre
 
+
 # modules
 source_module zinit
 
