@@ -96,6 +96,14 @@ zinit as="null" from='gh-r' for \
 # asdf
 zinit load asdf-vm/asdf
 
+# docker-completion
+zinit lucid has'docker' for \
+  as'completion' is-snippet \
+  'https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker' \
+  \
+  as'completion' is-snippet \
+  'https://github.com/docker/compose/blob/master/contrib/completion/zsh/_docker-compose' \
+
 # theme
 zinit ice atload='source ~/.p10k.zsh' lucid nocd depth=1
 zinit load romkatv/powerlevel10k
