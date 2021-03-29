@@ -1,3 +1,5 @@
+# {{@@ header() @@}}
+
 {%@@ if exists_in_path('code') @@%}
 [merge]
     tool = vscode
