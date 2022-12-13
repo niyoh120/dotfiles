@@ -1,0 +1,43 @@
+# zshrc
+
+# env
+export LOCAL_SHELL_INIT=1
+export LOCAL_ETC="$HOME/.local/etc"
+export LOCAL_BIN="$HOME/.local/bin"
+export LOCAL_OPT="$HOME/.local/opt"
+export LOCAL_TEMP="$HOME/.local/temp"
+
+export TEMP_PRE_CONF="$LOCAL_TEMP/pre.sh"
+export TEMP_POST_CONF="$LOCAL_TEMP/post.sh"
+
+function source_module() {
+    local _path="$LOCAL_ETC/shell/$1.sh"
+    if [ -e "$_path" ]; then
+        source "$_path"
+    else
+        echo "$_path not exist!"
+    fi
+}
+
+function source_modules() {
+    for arg in "$@"; do
+        source_module "$arg"
+    done
+}
+
+source_module pre
+
+# modules
+source_module omz
+
+[ -n "$_IS_MAC" ] && source_module macos
+
+source_modules \
+    comm \
+    func \
+    python \
+    go \
+    rust
+
+source_module post
+source_module starship

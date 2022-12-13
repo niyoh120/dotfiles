@@ -1,0 +1,17 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	longpaths = true
+	quotepath = off
+
+[include]
+	path = ~/.config/git/user.inc
+	path = ~/.config/git/proxy.inc
+	path = ~/.config/git/tool.inc
+[user]
+	name = niyoh
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
