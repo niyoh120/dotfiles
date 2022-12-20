@@ -49,6 +49,3 @@ function disable-gnubin(){
 }
 
 enable-gnubin
-
-# z.lua
-brew --prefix z.lua > /dev/null && eval "$(lua $(brew --prefix z.lua)/share/z.lua/z.lua --init zsh enhanced once echo fzf)"
