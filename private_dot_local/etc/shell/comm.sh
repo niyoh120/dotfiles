@@ -96,8 +96,8 @@ function zreload() {
 
 [ "$(command -v nvim)" ] && alias vim="nvim"
 
-# vagrant
-[ "$(command -v vagrant)" ] && alias vagrant="vg"
+[ "$(command -v vagrant)" ] && alias vg="vagrant"
+
 
 # fuck
 [ "$(command -v thefuck)" ] && eval "$(thefuck --alias)"
