@@ -1,9 +1,8 @@
-setup_shell() {
-  # Skip setup if the user wants or stdin is closed (not running interactively).
-  if [ "$CHSH" = no ]; then
-    return
-  fi
+#!/bin/sh
 
+{{ include "script_comm.sh" }}
+
+setup_shell() {
   # If this user's login shell is already "zsh", do not attempt to switch.
   if [ "$(basename -- "$SHELL")" = "zsh" ]; then
     return
@@ -19,16 +18,6 @@ EOF
   fi
 
   echo "${FMT_BLUE}Time to change your default shell to zsh:${FMT_RESET}"
-
-  # Prompt for user choice on changing the default login shell
-  printf '%sDo you want to change your default shell to zsh? [Y/n]%s ' \
-    "$FMT_YELLOW" "$FMT_RESET"
-  read -r opt
-  case $opt in
-    y*|Y*|"") ;;
-    n*|N*) echo "Shell change skipped."; return ;;
-    *) echo "Invalid choice. Shell change skipped."; return ;;
-  esac
 
   # Check if we're running on Termux
   case "$PREFIX" in
@@ -93,3 +82,12 @@ EOF
 
   echo
 }
+
+setup_color
+
+if ! command_exists zsh; then
+  echo "${FMT_YELLOW}Zsh is not installed.${FMT_RESET} Please install zsh first."
+  exit 1
+fi
+
+setup_shell
