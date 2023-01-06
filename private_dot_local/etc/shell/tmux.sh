@@ -8,6 +8,5 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" && "$TERM_PRO
 fi
 
 # alias
-alias tmconf='$EDITOR $HOME/.tmux.conf'
 alias tm="tmux new-session -As ${TMUX_DEFAULT_SESSION_NAME:-main}"
 alias tml='tmux list-sessions'
