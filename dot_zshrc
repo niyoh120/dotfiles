@@ -28,16 +28,19 @@ function source_modules() {
 source_module pre
 
 # modules
-source_module omz
+[ -d "$HOME/.oh-my-zsh" ] && source_module omz
 
-[ -n "$_IS_MAC" ] && source_module macos
+[ $(get-os-name) = "darwin" ] && source_module macos
 
 source_modules \
     comm \
     func \
+    git \
     python \
     go \
     rust
 
 source_module post
-source_module starship
+
+# 必须放最后
+[ "$(command -v starship)" ] &&  source_module starship

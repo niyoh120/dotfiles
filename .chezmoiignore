@@ -1,6 +1,6 @@
 README.md
 
-{{- if ne .chezmoi.hostname "work-laptop" }}
+{{ if ne .chezmoi.os "darwin" }}
 iterm2
 karabiner
-{{- end }}
+{{ end }}

@@ -46,7 +46,10 @@ function unset-proxy() {
   echo "Proxy unset."
 }
 
-[ "$(uname 2>/dev/null)" = "Darwin" ] && export _IS_MAC=1
+function get-os-name() {
+  OSName="$(uname 2>/dev/null)"
+  echo "${OSName:l}"
+}
 
 [ "$(command -v tmux)" ] && source_module tmux
 
