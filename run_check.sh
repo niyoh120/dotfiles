@@ -1,8 +1,8 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 set -euo pipefail
 
 function check_cmd() {
-    [ ! -x "$(command -v $1)" ] && echo "$1 not found!" || true
+    ([ ! -x "$(command -v "$1")" ] && echo "$1 not found!") || true
 }
 
 check_cmd git
