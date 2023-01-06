@@ -1,0 +1,14 @@
+{{ $fzfVersion := "0.35.1" }}
+[".local/bin/fzf"]
+    type = "file"
+    url = "https://github.com/junegunn/fzf/releases/download/{{ $fzfVersion }}/fzf-{{ $fzfVersion }}-{{ .chezmoi.os }}_{{ .chezmoi.arch }}.tar.gz"
+    executable = true
+    [".local/bin/fzf".filter]
+        command = "tar"
+        args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "fzf"]
+
+[".fzf"]
+    type = "git-repo"
+    url = "https://github.com/junegunn/fzf"
+    [".fzf".clone]
+        args = ["--depth", "1"]

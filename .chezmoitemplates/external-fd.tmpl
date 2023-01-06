@@ -1,0 +1,22 @@
+{{ $fdVersion := "8.6.0" }}
+{{ $fdInstall := true }}
+{{ $fdDownloadUrlPrefix := printf "https://github.com/sharkdp/fd/releases/download/v%s" $fdVersion }}
+{{ $fdArchiveName := printf "fd-v%s" $fdVersion }}
+
+{{ if eq .chezmoi.arch "amd64" }}
+{{ $fdArchiveName = printf "%s-x86_64-unknown-linux-musl" $fdArchiveName }}
+{{ else if hasPrefix .chezmoi.arch "arm" }}
+{{ $fdArchiveName = printf "%s-arm-unknown-linux-musleabihf" $fdArchiveName }}
+{{ else }}
+{{ $fdInstall = false }}
+{{ end }}
+
+{{ if $fdInstall }}
+[".local/bin/fd"]
+    type = "file"
+    url = "{{ printf "%s/%s.tar.gz"  $fdDownloadUrlPrefix $fdArchiveName }}"
+    executable = true
+    [".local/bin/fd".filter]
+        command = "tar"
+        args = ["--extract", "--file", "/dev/stdin", "--gzip", "--to-stdout", "{{ printf "%s/fd" $fdArchiveName }}" ]
+{{ end }}

@@ -1,4 +1,6 @@
 README.md
+install.sh
+script_comm.sh
 
 {{ if ne .chezmoi.os "darwin" }}
 iterm2
