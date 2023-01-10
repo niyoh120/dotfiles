@@ -1,1 +1,2 @@
-profit = "default"
+external_package_for_unknown_linux_type = "no"
+install_ssh_key = false

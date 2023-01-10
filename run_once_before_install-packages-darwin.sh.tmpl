@@ -13,13 +13,11 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "niyoh120/niyoh"
-tap "v2ray/v2ray"
 tap "xo/xo"
 brew "xz"
 brew "readline"
 brew "aria2"
 brew "coreutils"
-brew "asdf"
 brew "assh"
 brew "baidupcs-go"
 brew "bandwhich"
@@ -132,10 +130,9 @@ brew "yasm"
 brew "zoxide"
 brew "zsh"
 brew "zshdb"
-brew "espanso"
+brew "asdf"
 brew "filosottile/musl-cross/musl-cross"
 brew "niyoh120/niyoh/sshpass"
-brew "v2ray/v2ray/v2ray-core"
 brew "xo/xo/usql"
 cask "adoptopenjdk"
 cask "alt-tab"
@@ -200,7 +197,6 @@ cask "switchhosts"
 cask "tencent-lemon"
 cask "tencent-meeting"
 cask "trunk-io"
-cask "v2rayu"
 cask "vagrant"
 cask "vagrant-manager"
 cask "visual-studio-code"
@@ -209,6 +205,7 @@ cask "vnc-viewer"
 cask "wechatwork"
 cask "wine-stable"
 cask "wireshark"
+cask "espanso"
 mas "Battery Monitor", id: 836505650
 mas "ChmPages", id: 1164062917
 mas "Duplicate Photos Finder", id: 984929789
@@ -235,4 +232,6 @@ mas "Xcode", id: 497799835
 mas "Xnip", id: 1221250572
 mas "网易有道词典", id: 491854842
 EOF
-{{ end -}}
+
+{{ includeTemplate "install-pipx-packages.sh.tmpl" . }}
+{{ end }}
