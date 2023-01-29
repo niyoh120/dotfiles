@@ -51,10 +51,10 @@ function get-os-name() {
   echo "${OSName:l}"
 }
 
-[ "$(command -v tmux)" ] && source_module tmux
-
 [ -e "$TEMP_PRE_CONF" ] && source "$TEMP_PRE_CONF"
 
 push_front_path "/usr/local/sbin"
 push_front_path "/usr/local/bin"
 push_front_path "$LOCAL_BIN"
+
+[ "$(command -v tmux)" ] && source_module tmux
