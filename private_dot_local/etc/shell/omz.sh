@@ -75,6 +75,7 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-autocomplete
     command-not-found
     alias-tips
     extract
