@@ -28,6 +28,8 @@ function source_modules() {
 source_module pre
 
 # modules
+source_module completions
+
 [ -d "$HOME/.oh-my-zsh" ] && source_module omz
 
 [ $(get-os-name) = "darwin" ] && source_module macos
