@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if command -v code;then
+    code --wait "$@"
+elif command -v nvim;then
+    nvim "$@" 
+elif command -v vim;then
+    vim "$@"
+else
+    vi "$@"
+fi
+    

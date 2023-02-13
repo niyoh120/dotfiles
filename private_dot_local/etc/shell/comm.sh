@@ -8,13 +8,7 @@ export HISTFILE="$HOME/.zsh_history"
 setopt HIST_FIND_NO_DUPS
 
 # editor
-if [ -z "$EDITOR" ]; then
-    if [ "$(command -v vim)" ]; then
-        EDITOR="vim"
-    else
-        EDITOR="vi"
-    fi
-fi
+[ -z "$EDITOR" ] && EDITOR="$LOCAL_BIN"/EDITOR
 
 [ -z "$VISUAL" ] && VISUAL="$EDITOR"
 
