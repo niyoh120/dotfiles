@@ -2,9 +2,6 @@
 
 # env
 
-export EDITOR="code --wait"
-export GIT_EDITOR="code --wait"
-
 # replace with gnu version
 alias sed="gsed"
 alias grep="egrep"
