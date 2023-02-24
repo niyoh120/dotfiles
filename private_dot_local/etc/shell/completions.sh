@@ -1,3 +1,5 @@
 
 # brew
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+if [ "$(command -v brew)" ]; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
