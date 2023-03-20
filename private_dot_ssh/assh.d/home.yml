@@ -1,0 +1,4 @@
+hosts:
+  n1:
+    Host: 100.77.180.26
+    User: root
