@@ -1,8 +1,11 @@
 README.md
 install.sh
 script_comm.sh
+check.sh
+
+.tmux.conf
+.tmux
 
 {{ if ne .chezmoi.os "darwin" }}
-iterm2
-karabiner
+.config/karabiner
 {{ end }}
