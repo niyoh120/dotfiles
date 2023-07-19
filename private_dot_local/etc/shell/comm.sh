@@ -8,9 +8,9 @@ export HISTFILE="$HOME/.zsh_history"
 setopt HIST_FIND_NO_DUPS
 
 # editor
-[ -z "$EDITOR" ] && EDITOR="$LOCAL_BIN"/EDITOR
+[ -z "$EDITOR" ] && export EDITOR="$LOCAL_BIN"/EDITOR
 
-[ -z "$VISUAL" ] && VISUAL="$EDITOR"
+[ -z "$VISUAL" ] && export VISUAL="$EDITOR"
 
 # alias
 
@@ -80,7 +80,7 @@ alias mv='mv -i'
 # zsh
 function zreload() {
     echo "Reload zsh"
-    exec env -i TERM=$TERM TMUX=$TMUX zsh -l
+    exec zsh -l
 }
 
 [ "$(command -v curl)" ] && alias whatsmyip="curl ipinfo.io"
