@@ -65,6 +65,8 @@ ZSH_THEME="avit"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+zstyle ":omz:*" aliases no
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -85,6 +87,7 @@ plugins=(
     fzf
     fzf-tab
     poetry
+    vagrant
     )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,3 +119,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 bindkey "^[OA" up-line-or-history
+
