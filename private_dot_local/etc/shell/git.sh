@@ -1,5 +1,7 @@
 # git
 
+alias g=git
+
 # list any files flagged w/ --skip-worktree alias
 alias glsskip="git ls-files -v|grep '^S'"
 # add --skip-worktree flag to file
