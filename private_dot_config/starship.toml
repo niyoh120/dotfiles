@@ -1,4 +1,8 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
+$hostname
 [](#9A348E)\
 $os\
 $username\
@@ -42,7 +46,7 @@ disabled = false
 # represents the current operating system
 [os]
 style = "bg:#9A348E"
-disabled = true # Disabled by default
+disabled = false # Disabled by default
 
 [directory]
 style = "bg:#DA627D"
@@ -137,3 +141,8 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
 format = '[ ♥ $time ]($style)'
+
+[hostname]
+ssh_only = true
+format = '[$ssh_symbol$hostname]($style) '
+disabled = false
