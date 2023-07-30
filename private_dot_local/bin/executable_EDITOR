@@ -1,12 +1,23 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 
-#/usr/local/bin/code --wait "$@"
-if command -v code;then
-    code --wait "$@"
-elif command -v nvim;then
-    nvim "$@" 
-elif command -v vim;then
-    vim "$@"
-else
-    vi "$@"
-fi
+editors=("code" "vim" "nano")
+paths=("$HOME/.local/bin" "/usr/local/bin" "/usr/bin" "/bin")
+done="false"
+
+for editor in "${editors[@]}"; do
+    for path in "${paths[@]}"; do
+        if command -v "$path/$editor" > /dev/null 2>&1; then
+            done=true
+            echo "use $path/$editor"
+            if [ "$editor" == code ]; then
+                "$path/$editor" --wait "$@"
+            else
+                "$path/$editor" "$@"
+            fi
+            break
+        fi
+    done
+    if [ $done == "true" ]; then
+        break
+    fi
+done
