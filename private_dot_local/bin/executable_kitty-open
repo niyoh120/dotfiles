@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function kitty_open() {
+  HOMEBREW=/usr/local/bin
+  QUAKE=($($HOMEBREW/yabai -m query --windows --space |jq '.[]|select(.app=="kitty" and .title!="Quake")|.id,."has-focus"'))
+  
+  if [[ ${#QUAKE} -eq 0 ]]; then
+    open -a kitty.app -n --args -1 --instance-group default &>/dev/null & disown; 
+    while [[ ${#QUAKE[@]} -ne 2 ]];
+      do
+        QUAKE=($($HOMEBREW/yabai -m query --windows --space |jq '.[]|select(.app=="kitty" and .title!="Quake")|.id,."has-focus"'))
+      done
+  elif [[ ${QUAKE[1]} == false ]]; then
+    $HOMEBREW/yabai -m window "${QUAKE[0]}" --focus;
+  fi
+}
+
+kitty_open

@@ -8,4 +8,8 @@ check.sh
 
 {{ if ne .chezmoi.os "darwin" }}
 .config/karabiner
+.config/skhd
+.config/yabai
+.local/bin/kitty-quake
+.local/bin/kitty-open
 {{ end }}
