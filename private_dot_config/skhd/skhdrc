@@ -1,0 +1,5 @@
+
+alt - return : ~/.local/bin/kitty-open
+alt - 1 : open -a "/Applications/Google Chrome.app"
+alt - 2 : open -a "/Applications/ForkLift.app"
+f11 : ~/.local/bin/kitty-quake
