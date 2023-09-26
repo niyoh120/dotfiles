@@ -1,48 +1,48 @@
 #!/bin/bash
 
-# quake风格的kitty窗口
-function kitty_quake() {
-  HOMEBREW=/usr/local/bin
-  QUAKE=($($HOMEBREW/yabai -m query --windows --space |jq '.[]|select(.title=="Quake")|.id,."is-minimized",."has-border",."has-focus"'))
+# WINDOW风格的kitty窗口
+function kitty_WINDOW() {
+  BIN_PATH=/usr/local/bin
+  WINDOW=($($BIN_PATH/yabai -m query --windows --space |jq '.[]|select(.title=="WINDOW")|.id,."is-minimized",."has-border",."has-focus"'))
   
   # 没有则创建一个新窗口
-  if [[ ${#QUAKE} -eq 0 ]]; then
-    open -a kitty.app -n --args -1 --instance-group Quake --title Quake -o \
-      tab_title_template="Quake: {index}" \
+  if [[ ${#WINDOW} -eq 0 ]]; then
+    open -a kitty.app -n --args -1 --instance-group WINDOW --title WINDOW -o \
+      tab_title_template="WINDOW: {index}" \
       &>/dev/null & disown 
-    while [[ ${#QUAKE[@]} -ne 4 ]]
+    while [[ ${#WINDOW[@]} -ne 4 ]]
       do
-        QUAKE=($($HOMEBREW/yabai -m query --windows --space |jq '.[]|select(.title=="Quake")|.id,."is-minimized",."has-border",."has-focus"'))
+        WINDOW=($($BIN_PATH/yabai -m query --windows --space |jq '.[]|select(.title=="WINDOW")|.id,."is-minimized",."has-border",."has-focus"'))
       done
-    $HOMEBREW/yabai -m window "${QUAKE[0]}" --toggle sticky
-    $HOMEBREW/yabai -m window "${QUAKE[0]}" --move abs:0:0
-    $HOMEBREW/yabai -m window "${QUAKE[0]}" --resize abs:10000:450
-    $HOMEBREW/yabai -m window "${QUAKE[0]}" --opacity 0.65
+    $BIN_PATH/yabai -m window "${WINDOW[0]}" --toggle sticky
+    $BIN_PATH/yabai -m window "${WINDOW[0]}" --move abs:0:0
+    $BIN_PATH/yabai -m window "${WINDOW[0]}" --resize abs:10000:450
+    $BIN_PATH/yabai -m window "${WINDOW[0]}" --opacity 0.65
   # 焦点不在窗口上, 则切换焦点至窗口
-  elif [[ ${QUAKE[3]} == false ]]; then
-    [[ ${QUAKE[1]} == true ]] && ($HOMEBREW/yabai -m window "${QUAKE[0]}" --deminimize || :)
-    $HOMEBREW/yabai -m window "${QUAKE[0]}" --move abs:0:0
-    $HOMEBREW/yabai -m window "${QUAKE[0]}" --resize abs:10000:450
-    $HOMEBREW/yabai -m window "${QUAKE[0]}" --opacity 0.65
-    $HOMEBREW/yabai -m window "${QUAKE[0]}" --focus "${QUAKE[0]}"
-    [[ ${QUAKE[2]} == false ]] && ($HOMEBREW/yabai -m window "${QUAKE[0]}" --toggle border || :)
+  elif [[ ${WINDOW[3]} == false ]]; then
+    [[ ${WINDOW[1]} == true ]] && ($BIN_PATH/yabai -m window "${WINDOW[0]}" --deminimize || :)
+    $BIN_PATH/yabai -m window "${WINDOW[0]}" --move abs:0:0
+    $BIN_PATH/yabai -m window "${WINDOW[0]}" --resize abs:10000:450
+    $BIN_PATH/yabai -m window "${WINDOW[0]}" --opacity 0.65
+    $BIN_PATH/yabai -m window "${WINDOW[0]}" --focus "${WINDOW[0]}"
+    [[ ${WINDOW[2]} == false ]] && ($BIN_PATH/yabai -m window "${WINDOW[0]}" --toggle border || :)
   # 焦点在窗口上
-  elif [[ ${QUAKE[3]} == true ]]; then
-    [[ ${QUAKE[2]} == false ]] && ($HOMEBREW/yabai -m window "${QUAKE[0]}" --toggle border || :)
+  elif [[ ${WINDOW[3]} == true ]]; then
+    [[ ${WINDOW[2]} == false ]] && ($BIN_PATH/yabai -m window "${WINDOW[0]}" --toggle border || :)
     # 窗口没有最小化, 则最小化, 否则恢复
-    if [[ ${QUAKE[1]} == false ]]; then
-      $HOMEBREW/yabai -m window "${QUAKE[0]}" --opacity 0.001
-      $HOMEBREW/yabai -m window "${QUAKE[0]}" --minimize
+    if [[ ${WINDOW[1]} == false ]]; then
+      $BIN_PATH/yabai -m window "${WINDOW[0]}" --opacity 0.001
+      $BIN_PATH/yabai -m window "${WINDOW[0]}" --minimize
     else
-      $HOMEBREW/yabai -m window "${QUAKE[0]}" --deminimize
-      $HOMEBREW/yabai -m window "${QUAKE[0]}" --move abs:0:0
-      $HOMEBREW/yabai -m window "${QUAKE[0]}" --resize abs:10000:450
-      $HOMEBREW/yabai -m window "${QUAKE[0]}" --opacity 0.65
-      $HOMEBREW/yabai -m window "${QUAKE[0]}" --focus "${QUAKE[0]}"
+      $BIN_PATH/yabai -m window "${WINDOW[0]}" --deminimize
+      $BIN_PATH/yabai -m window "${WINDOW[0]}" --move abs:0:0
+      $BIN_PATH/yabai -m window "${WINDOW[0]}" --resize abs:10000:450
+      $BIN_PATH/yabai -m window "${WINDOW[0]}" --opacity 0.65
+      $BIN_PATH/yabai -m window "${WINDOW[0]}" --focus "${WINDOW[0]}"
     fi
   else
-    echo quake failed
+    echo WINDOW failed
   fi
 }
 
-kitty_quake
+kitty_WINDOW
