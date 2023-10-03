@@ -6,10 +6,6 @@ function kitty_open() {
   
   if [[ ${#WINDOW} -eq 0 ]]; then
     open -a kitty.app -n --args -1 --instance-group default &>/dev/null & disown; 
-    while [[ ${#WINDOW[@]} -ne 2 ]];
-      do
-        WINDOW=($($BIN_PATH/yabai -m query --windows --space |jq '.[]|select(.app=="kitty" and .title!="WINDOW")|.id,."has-focus"'))
-      done
   elif [[ ${WINDOW[1]} == false ]]; then
     $BIN_PATH/yabai -m window "${WINDOW[0]}" --focus;
   fi
