@@ -1,18 +1,18 @@
 #!/bin/bash
 
-# WINDOW风格的kitty窗口
-function kitty_WINDOW() {
+# quake风格的kitty窗口
+function kitty_quake() {
   BIN_PATH=/usr/local/bin
-  WINDOW=($($BIN_PATH/yabai -m query --windows --space |jq '.[]|select(.title=="WINDOW")|.id,."is-minimized",."has-border",."has-focus"'))
+  WINDOW=($($BIN_PATH/yabai -m query --windows --space |jq '.[]|select(.title=="QUAKE")|.id,."is-minimized",."has-border",."has-focus"'))
   
   # 没有则创建一个新窗口
   if [[ ${#WINDOW} -eq 0 ]]; then
-    open -a kitty.app -n --args -1 --instance-group WINDOW --title WINDOW -o \
-      tab_title_template="WINDOW: {index}" \
+    open -a kitty.app -n --args -1 --instance-group quake --title quake -o \
+      tab_title_template="quake: {index}" \
       &>/dev/null & disown 
     while [[ ${#WINDOW[@]} -ne 4 ]]
       do
-        WINDOW=($($BIN_PATH/yabai -m query --windows --space |jq '.[]|select(.title=="WINDOW")|.id,."is-minimized",."has-border",."has-focus"'))
+        WINDOW=($($BIN_PATH/yabai -m query --windows --space |jq '.[]|select(.title=="QUAKE")|.id,."is-minimized",."has-border",."has-focus"'))
       done
     $BIN_PATH/yabai -m window "${WINDOW[0]}" --toggle sticky
     $BIN_PATH/yabai -m window "${WINDOW[0]}" --move abs:0:0
@@ -41,8 +41,8 @@ function kitty_WINDOW() {
       $BIN_PATH/yabai -m window "${WINDOW[0]}" --focus "${WINDOW[0]}"
     fi
   else
-    echo WINDOW failed
+    echo quake failed
   fi
 }
 
-kitty_WINDOW
+kitty_quake
