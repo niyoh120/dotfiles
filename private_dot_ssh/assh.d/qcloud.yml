@@ -1,4 +1,0 @@
-hosts:
-  qcloud-sg-1:
-    HostName: 129.226.222.149
-    User: root
