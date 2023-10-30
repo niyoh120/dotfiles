@@ -1,7 +1,0 @@
-hosts:
-  n1:
-    HostName: 192.168.3.254
-    User: root
-  eq12:
-    HostName: 192.168.3.200
-    User: root

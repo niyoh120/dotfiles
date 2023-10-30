@@ -1,9 +1,0 @@
-hosts:
-  bwg-us-1:
-    HostName: 65.49.206.20
-    Port: 26260
-    User: root
-
-  ssh-n1.niyoh.top:
-    User: root
-    ProxyCommand: cloudflared access ssh --hostname %h

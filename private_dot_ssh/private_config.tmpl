@@ -1,0 +1,71 @@
+Host us-1
+    Port 26260
+    User root
+    HostName 65.49.206.20
+
+Host sg-1
+    User root
+    HostName 129.226.222.149
+
+Host vn-1
+    User root
+    HostName 103.12.76.123
+
+Host pve
+    User root
+    HostName 192.168.3.253
+
+Host r5c
+    User root
+    HostName 192.168.3.254
+
+Host k3s-eq12
+    User root
+    HostName 192.168.3.200
+
+Host bt-eq12
+    User root
+    HostName 192.168.3.201
+
+Host docker-eq12
+    User root
+    HostName 192.168.3.202
+
+Host mix2
+    Port 8022
+    User u0_a145
+    HostName 192.168.3.11
+
+Host k20p
+    Port 8022
+    User u0_a167
+    HostName 192.168.3.13
+
+{{ if stat ("/Users/niyoh/.colima") -}}
+
+Include /Users/niyoh/.colima/ssh_config
+
+Host colima
+    IdentityFile "/Users/niyoh/.lima/_config/user"
+    IdentityFile "/Users/niyoh/.ssh/id_rsa"
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    NoHostAuthenticationForLocalhost yes
+    GSSAPIAuthentication no
+    PreferredAuthentications publickey
+    Compression no
+    BatchMode yes
+    IdentitiesOnly yes
+    Ciphers "^aes128-gcm@openssh.com,aes256-gcm@openssh.com"
+    User niyoh
+    ControlMaster auto
+    ControlPath "/Users/niyoh/.lima/colima/ssh.sock"
+    ControlPersist 5m
+    Hostname 127.0.0.1
+    Port 51731
+
+{{- end }}
+
+Host *
+  Port 22
+  ServerAliveInterval 180
