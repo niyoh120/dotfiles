@@ -44,12 +44,5 @@ source_modules \
 
 source_module post
 
-if test -n "$KITTY_INSTALLATION_DIR" && test -z "$KITTY_SHELL_INTEGRATION"; then
-    export KITTY_SHELL_INTEGRATION="enabled"
-    autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
-    kitty-integration
-    unfunction kitty-integration
-fi
-
 # 必须放最后
 [ "$(command -v starship)" ] &&  source_module starship

@@ -10,6 +10,4 @@ check.sh
 .config/karabiner
 .config/skhd
 .config/yabai
-.local/bin/kitty-quake
-.local/bin/kitty-open
 {{ end }}
