@@ -1,23 +1,14 @@
 #!/bin/bash
 
 editors=("code" "vim" "nano")
-paths=("$HOME/.local/bin" "/usr/local/bin" "/usr/bin" "/bin")
-done="false"
 
 for editor in "${editors[@]}"; do
-    for path in "${paths[@]}"; do
-        if command -v "$path/$editor" > /dev/null 2>&1; then
-            done=true
-            echo "use $path/$editor"
-            if [ "$editor" == code ]; then
-                "$path/$editor" --wait "$@"
-            else
-                "$path/$editor" "$@"
-            fi
-            break
+    if [ "$(command -v "$editor")" ]; then
+        if [ "$editor" == "code" ]; then
+            "$editor" --wait "$@"
+        else
+            "$editor" "$@"
         fi
-    done
-    if [ $done == "true" ]; then
         break
     fi
 done
