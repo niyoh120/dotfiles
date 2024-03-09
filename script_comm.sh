@@ -86,11 +86,6 @@ supports_hyperlinks() {
   Hyper|iTerm.app|terminology|WezTerm) return 0 ;;
   esac
 
-  # kitty supports hyperlinks
-  if [ "$TERM" = xterm-kitty ]; then
-    return 0
-  fi
-
   # Windows Terminal also supports hyperlinks
   if [ -n "$WT_SESSION" ]; then
     return 0
