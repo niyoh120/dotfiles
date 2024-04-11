@@ -336,3 +336,8 @@ cmake-*
 
 # https://trunk.io/
 .trunk
+
+# https://direnv.net/
+.envrc
+
+.env.dev
