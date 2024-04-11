@@ -17,6 +17,7 @@ function check_all() {
     check_cmd exa
     check_cmd fd
     check_cmd thefuck
+    check_cmd zxoide
 
     check_cmd python3
     check_cmd pip3
