@@ -16,7 +16,6 @@ function check_all() {
     check_cmd starship
     check_cmd exa
     check_cmd fd
-    check_cmd thefuck
     check_cmd z
 
     check_cmd python3

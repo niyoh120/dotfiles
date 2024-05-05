@@ -92,9 +92,5 @@ function zreload() {
 
 [ "$(command -v vagrant)" ] && alias vg="vagrant"
 
-
-# fuck
-[ "$(command -v thefuck)" ] && eval "$(thefuck --alias)"
-
 # zoxide
 [ "$(command -v zoxide)" ] && eval "$(zoxide init zsh)"
