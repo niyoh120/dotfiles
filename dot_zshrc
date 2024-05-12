@@ -40,11 +40,12 @@ source_modules \
     git \
     python \
     go \
-    rust
+    rust \
+    arch
 
 source_module post
 
 # 必须放最后
-[ "$(command -v starship)" ] &&  source_module starship
+[ "$(command -v starship)" ] && source_module starship
 
 source_module check
