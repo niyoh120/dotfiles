@@ -1,8 +1,10 @@
+{{ if eq .chezmoi.os "windows" }}
+{{ else }}
 {{ includeTemplate "external-oh-my-zsh.tmpl" . }}
-
 {{ if eq .external_package_for_unknown_linux_type "default" }}
 {{ includeTemplate "external-unknown-linux.tmpl" . }}
 {{ else if eq .external_package_for_unknown_linux_type "mini" }}
 {{ includeTemplate "external-unknown-linux-mini.tmpl" . }}
 {{ else }}
+{{ end }}
 {{ end }}

@@ -2,6 +2,7 @@ README.md
 install.sh
 script_comm.sh
 check.sh
+scoopfile.json
 
 .tmux.conf
 .tmux
@@ -10,4 +11,16 @@ check.sh
 .config/karabiner
 .config/skhd
 .config/yabai
+{{ end }}
+
+{{ if eq .chezmoi.os "windows" }}
+.local/bin
+.local/etc/shell
+.zshrc
+{{ end }}
+
+{{ if ne .chezmoi.os "windows" }}
+.local/ahk
+AppData
+Documents
 {{ end }}

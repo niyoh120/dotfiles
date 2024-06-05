@@ -1,3 +1,4 @@
+{{- if ne .chezmoi.os "windows" -}}
 #!/bin/sh
 
 {{ include "script_comm.sh" }}
@@ -91,3 +92,4 @@ if ! command_exists zsh; then
 fi
 
 setup_shell
+{{- end }}

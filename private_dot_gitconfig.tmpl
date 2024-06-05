@@ -1,6 +1,10 @@
 [core]
 	excludesfile = ~/.gitignore_global
+{{- if eq .chezmoi.os "windows" }}
+	autocrlf = true 
+{{- else }}
 	autocrlf = input
+{{- end }}
 	longpaths = true
 	quotepath = off
 
@@ -8,8 +12,7 @@
 	path = ~/.config/git/user.inc
 	path = ~/.config/git/proxy.inc
 	path = ~/.config/git/tool.inc
-[user]
-	name = niyoh
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

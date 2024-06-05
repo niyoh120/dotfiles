@@ -1,0 +1,25 @@
+follow = true
+[data]
+  {{ if eq .chezmoi.os "windows" }}
+  shell = "PowerShell"
+  shellexe = "pwsh.exe"
+  {{ end }}
+[merge]
+  {{ if eq .chezmoi.os "windows" }}
+  command = "code"
+  args = "--wait $MERGED"
+  {{ end }}
+[cd]
+  {{ if eq .chezmoi.os "windows" }}
+  command = "pwsh"
+  args = ["-NoProfile", "-NoLogo"]
+  {{ end }}
+[diff]
+  {{ if eq .chezmoi.os "windows" }}
+  pager = "delta"
+  {{ end }}
+[interpreters.ps1]
+  {{ if eq .chezmoi.os "windows" }}
+  command = "pwsh"
+  args = ["-NoLogo", "-NoProfile"]
+  {{ end }}
