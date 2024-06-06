@@ -1,4 +1,6 @@
 {{- if eq .chezmoi.os "windows" -}}
-# scoopfile.json hash: {{ include "scoopfile.json" | sha256sum }}
+{{- if lookPath "scoop" }}
+# hash: {{ include "scoopfile.json" | sha256sum }}
 scoop import "$(chezmoi source-path)/scoopfile.json"
+{{- end }}
 {{- end }}
