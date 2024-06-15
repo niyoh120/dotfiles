@@ -534,13 +534,6 @@
         },
         {
             "Info": "",
-            "Version": "1.0.207",
-            "Source": "extras",
-            "Name": "tabby",
-            "Updated": "2024-03-06T12:28:39.8434887+08:00"
-        },
-        {
-            "Info": "",
             "Version": "2.6",
             "Source": "kkzzhizhou",
             "Name": "tegrarcmgui",
