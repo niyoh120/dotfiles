@@ -1,7 +1,7 @@
 {{- if eq .chezmoi.os "windows" -}}
 
-# ahk script hash: {{ include ".local/ahk/keyboard.ahk" | sha256sum }}
-# ahk script hash: {{ include ".local/ahk/terminal.ahk" | sha256sum }}
+# ahk script hash: {{ include "private_dot_local/ahk/keyboard.ahk" | sha256sum }}
+# ahk script hash: {{ include "private_dot_local/ahk/terminal.ahk" | sha256sum }}
 
 $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\\Start Menu\\Programs\\Startup\\keyboard.ahk.lnk")
