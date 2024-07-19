@@ -84,20 +84,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-06-19T08:18:14.9399561+08:00",
-            "Source": "extras",
-            "Version": "1.6.6",
-            "Name": "another-redis-desktop-manager"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-03-23T01:36:19.7209581+08:00",
-            "Source": "main",
-            "Version": "2.9.3",
-            "Name": "apktool"
-        },
-        {
-            "Info": "",
             "Updated": "2024-03-06T11:33:22.9093332+08:00",
             "Source": "main",
             "Version": "1.37.0-1",
@@ -238,24 +224,10 @@
         },
         {
             "Info": "",
-            "Updated": "2024-05-12T10:43:11.5177273+08:00",
-            "Source": "extras",
-            "Version": "12.7",
-            "Name": "heidisql"
-        },
-        {
-            "Info": "",
             "Updated": "2024-06-19T08:52:46.1103014+08:00",
             "Source": "main",
             "Version": "3.15.2",
             "Name": "helm"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-05-11T01:18:50.6565801+08:00",
-            "Source": "kkzzhizhou",
-            "Version": "4.1",
-            "Name": "hitomi-downloader_DoveBoy"
         },
         {
             "Info": "",
@@ -308,13 +280,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-05-31T22:13:31.5139822+08:00",
-            "Source": "extras",
-            "Version": "2024.5.271333-latest",
-            "Name": "lens"
-        },
-        {
-            "Info": "",
             "Updated": "2024-03-11T23:50:49.6331029+08:00",
             "Source": "extras",
             "Version": "1.10.0",
@@ -350,13 +315,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-03-12T13:29:20.6722827+08:00",
-            "Source": "extras",
-            "Version": "3.26",
-            "Name": "nekoray"
-        },
-        {
-            "Info": "",
             "Updated": "2024-05-22T21:04:05.9940482+08:00",
             "Source": "main",
             "Version": "0.10.0",
@@ -368,20 +326,6 @@
             "Source": "extras",
             "Version": "3.9.3",
             "Name": "notion"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-03-13T10:24:59.5709804+08:00",
-            "Source": "java",
-            "Version": "8u342-b07",
-            "Name": "openjdk8-redhat"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-03-10T22:55:42.4098243+08:00",
-            "Source": "java",
-            "Version": "8u342-b07",
-            "Name": "openjdk8-redhat-jre"
         },
         {
             "Info": "",
@@ -525,13 +469,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-05-31T22:35:49.8468617+08:00",
-            "Source": "extras",
-            "Version": "1.66.4",
-            "Name": "tailscale"
-        },
-        {
-            "Info": "",
             "Updated": "2024-03-25T20:20:06.9177854+08:00",
             "Source": "kkzzhizhou",
             "Version": "2.6",
@@ -606,6 +543,20 @@
             "Source": "main",
             "Version": "0.9.4",
             "Name": "zoxide"
+        },
+        {
+            "Info": "",
+            "Updated": "2024-03-10T23:04:46.7274952+08:00",
+            "Source": "main",
+            "Version": "v1.0.0",
+            "Name": "sing-box"
+        },
+        {
+            "Info": "",
+            "Updated": "2024-03-10T23:04:46.7274952+08:00",
+            "Source": "main",
+            "Version": "v1.0.0",
+            "Name": "winsw"
         }
     ]
 }
