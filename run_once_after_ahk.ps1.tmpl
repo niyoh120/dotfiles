@@ -5,10 +5,10 @@
 
 $WshShell = New-Object -comObject WScript.Shell
 $Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\\Start Menu\\Programs\\Startup\\keyboard.ahk.lnk")
-$Shortcut.TargetPath = "C:\Users\niyoh\.local\ahk\keyboard.ahk"
+$Shortcut.TargetPath = "$env:USERPROFILE\.local\ahk\keyboard.ahk"
 $Shortcut.Save()
 $Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\\Start Menu\\Programs\\Startup\\terminal.ahk.lnk")
-$Shortcut.TargetPath = "C:\Users\niyoh\.local\ahk\terminal.ahk"
+$Shortcut.TargetPath = "$env:USERPROFILE\.local\ahk\terminal.ahk"
 $Shortcut.Save()
 
 {{- end }}
