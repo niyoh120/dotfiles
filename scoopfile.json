@@ -557,6 +557,13 @@
             "Source": "main",
             "Version": "v1.0.0",
             "Name": "winsw"
+        },
+        {
+            "Info": "",
+            "Updated": "2024-03-10T23:04:46.7274952+08:00",
+            "Source": "main",
+            "Version": "v1.0.0",
+            "Name": "starship"
         }
     ]
 }
