@@ -3,6 +3,7 @@ install.sh
 script_comm.sh
 check.sh
 scoopfile.json
+yay_installed.txt
 
 .tmux.conf
 .tmux
