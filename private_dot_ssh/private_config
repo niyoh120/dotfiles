@@ -1,0 +1,59 @@
+Host sg-1
+    User root
+    HostName 129.226.222.149
+
+Host sg-2
+    User admin
+    HostName 18.141.20.227
+
+Host vn-1
+    User root
+    HostName 103.12.76.123
+
+Host kr-1
+    User root
+    HostName 146.56.104.82
+
+Host kr-2
+    User root
+    HostName 144.24.67.97
+
+Host kr-3
+    User root
+    HostName 140.245.68.105
+
+Host pve
+    User root
+    HostName 192.168.3.253
+
+Host r5c
+    User root
+    HostName 192.168.3.254
+
+Host k3s-eq12
+    User root
+    HostName 192.168.3.200
+
+Host bt-eq12
+    User root
+    HostName 192.168.3.201
+
+Host docker-eq12
+    User root
+    HostName 192.168.3.202
+
+Host mix2
+    Port 8022
+    User u0_a145
+    HostName 192.168.3.11
+
+Host k20p
+    Port 8022
+    User u0_a167
+    HostName 192.168.3.13
+
+Host *
+    Port 22
+    ServerAliveInterval 180
+
+
