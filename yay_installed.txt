@@ -1,8 +1,5 @@
 ansible
 asdf-vm
-base
-base-devel
-bind
 chezmoi
 direnv
 duf
@@ -13,7 +10,6 @@ go
 helm
 kubecm-git
 kubectl
-man-db
 nerdctl
 nexttrace-bin
 prettyping
@@ -21,6 +17,5 @@ rustup
 socat
 starship
 wget
-wslu
 yay-bin
 zoxide

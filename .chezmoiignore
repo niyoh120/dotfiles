@@ -18,10 +18,13 @@ yay_installed.txt
 .local/bin
 .local/etc/shell
 .zshrc
+.tmux.conf
+.tmux
 {{ end }}
 
 {{ if ne .chezmoi.os "windows" }}
 .local/ahk
 AppData
 Documents
+.wslconfig
 {{ end }}

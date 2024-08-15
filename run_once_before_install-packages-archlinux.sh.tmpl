@@ -1,5 +1,6 @@
 {{- if eq .chezmoi.os "linux" -}}
 {{- if lookPath "yay" -}}
+#!/bin/sh
 # hash: {{ include "yay_installed.txt" | sha256sum }}
 yes | yay -S $(cat yay_installed.txt)
 {{- end }}
