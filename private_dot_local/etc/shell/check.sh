@@ -17,7 +17,6 @@ function check_all() {
 
     check_cmd python3
     check_cmd pip3
-    check_cmd pipx
     check_cmd prettyping
 }
 

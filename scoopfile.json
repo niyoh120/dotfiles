@@ -343,13 +343,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-06-21T09:55:28.7272065+08:00",
-            "Source": "main",
-            "Version": "1.6.0",
-            "Name": "pipx"
-        },
-        {
-            "Info": "",
             "Updated": "2024-06-19T15:52:35.2158113+08:00",
             "Source": "kkzzhizhou",
             "Version": "1.8.14.0",
@@ -564,6 +557,13 @@
             "Source": "main",
             "Version": "v1.0.0",
             "Name": "starship"
+        },
+        {
+            "Info": "",
+            "Updated": "2024-06-21T09:55:28.7272065+08:00",
+            "Source": "main",
+            "Version": "0.4.16",
+            "Name": "uv"
         }
     ]
 }

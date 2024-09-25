@@ -19,3 +19,4 @@ starship
 wget
 yay-bin
 zoxide
+uv
