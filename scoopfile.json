@@ -49,12 +49,6 @@
             "Manifests": 308
         },
         {
-            "Name": "DoveBoy_Apps",
-            "Source": "https://github.com/DoveBoy/Apps",
-            "Updated": "2024-05-07T22:09:09+08:00",
-            "Manifests": 645
-        },
-        {
             "Name": "kkzzhizhou",
             "Source": "https://github.com/kkzzhizhou/scoop-apps",
             "Updated": "2024-06-30T12:46:02+08:00",
@@ -68,20 +62,6 @@
         }
     ],
     "apps": [
-        {
-            "Info": "",
-            "Updated": "2024-04-17T16:01:03.9294811+08:00",
-            "Source": "main",
-            "Version": "35.0.0",
-            "Name": "adb"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-06-19T08:16:43.2255385+08:00",
-            "Source": "extras",
-            "Version": "24.06.2",
-            "Name": "anki"
-        },
         {
             "Info": "",
             "Updated": "2024-03-06T11:33:22.9093332+08:00",
@@ -109,13 +89,6 @@
             "Source": "main",
             "Version": "2.49.1",
             "Name": "chezmoi"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-03-17T01:28:27.1501896+08:00",
-            "Source": "extras",
-            "Version": "7.0.0",
-            "Name": "czkawka-gui"
         },
         {
             "Info": "",
@@ -189,20 +162,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-05-31T17:11:14.8132643+08:00",
-            "Source": "extras",
-            "Version": "1.5.2.165",
-            "Name": "geekuninstaller"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-06-20T08:16:01.9365792+08:00",
-            "Source": "main",
-            "Version": "1.22.4",
-            "Name": "go"
-        },
-        {
-            "Info": "",
             "Updated": "2024-06-24T08:16:56.3504074+08:00",
             "Source": "extras",
             "Version": "126.0.6478.115",
@@ -224,27 +183,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-06-19T08:52:46.1103014+08:00",
-            "Source": "main",
-            "Version": "3.15.2",
-            "Name": "helm"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-06-24T09:41:45.0864552+08:00",
-            "Source": "extras",
-            "Version": "2024.1.4-241.18034.62",
-            "Name": "idea-ultimate"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-04-27T21:43:37.7229018+08:00",
-            "Source": "DoveBoy_Apps",
-            "Version": "1.0.8",
-            "Name": "imfile"
-        },
-        {
-            "Info": "",
             "Updated": "2024-03-06T15:52:58.5433585+08:00",
             "Source": "main",
             "Version": "0.50",
@@ -259,31 +197,10 @@
         },
         {
             "Info": "",
-            "Updated": "2024-05-05T20:28:50.3813311+08:00",
-            "Source": "extras",
-            "Version": "24.02-3692",
-            "Name": "kdeconnect"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-06-19T11:30:34.1774805+08:00",
-            "Source": "main",
-            "Version": "1.30.2",
-            "Name": "kubectl"
-        },
-        {
-            "Info": "",
             "Updated": "2024-06-20T15:17:50.5146693+08:00",
             "Source": "main",
             "Version": "24.1",
             "Name": "latex"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-03-11T23:50:49.6331029+08:00",
-            "Source": "extras",
-            "Version": "1.10.0",
-            "Name": "lepton"
         },
         {
             "Info": "",
@@ -329,38 +246,10 @@
         },
         {
             "Info": "",
-            "Updated": "2024-06-20T14:33:10.1182526+08:00",
-            "Source": "main",
-            "Version": "3.2",
-            "Name": "pandoc"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-03-11T23:30:48.4150794+08:00",
-            "Source": "extras",
-            "Version": "2.3.1",
-            "Name": "picgo"
-        },
-        {
-            "Info": "",
             "Updated": "2024-06-19T15:52:35.2158113+08:00",
             "Source": "kkzzhizhou",
             "Version": "1.8.14.0",
             "Name": "pixpin"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-03-30T13:37:38.1464935+08:00",
-            "Source": "kkzzhizhou",
-            "Version": "1.0.9",
-            "Name": "proxypin"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-04-13T02:39:30.9708958+08:00",
-            "Source": "extras",
-            "Version": "2.2.1",
-            "Name": "qtscrcpy"
         },
         {
             "Info": "",
@@ -392,34 +281,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-06-24T08:18:51.5982152+08:00",
-            "Source": "extras",
-            "Version": "1.2.6",
-            "Name": "rustdesk"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-05-12T10:43:58.5052721+08:00",
-            "Source": "main",
-            "Version": "1.27.1",
-            "Name": "rustup"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-06-19T15:48:58.6851996+08:00",
-            "Source": "niyoh120",
-            "Version": "1.6.0",
-            "Name": "SimpleLive"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-03-06T22:45:47.0084152+08:00",
-            "Source": "extras",
-            "Version": "0.5.23",
-            "Name": "sorayomi"
-        },
-        {
-            "Info": "",
             "Updated": "2024-03-25T23:55:32.9071242+08:00",
             "Source": "kkzzhizhou",
             "Version": "2.004",
@@ -431,20 +292,6 @@
             "Source": "kkzzhizhou",
             "Version": "2.002",
             "Name": "Source-Han-Serif-SC"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-06-04T15:47:24.5073969+08:00",
-            "Source": "extras",
-            "Version": "1.3.0.2",
-            "Name": "spacesniffer"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-03-06T20:48:13.2147989+08:00",
-            "Source": "games",
-            "Version": "nightly-20240306",
-            "Name": "steam"
         },
         {
             "Info": "",
@@ -462,20 +309,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-03-25T20:20:06.9177854+08:00",
-            "Source": "kkzzhizhou",
-            "Version": "2.6",
-            "Name": "tegrarcmgui"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-05-31T22:29:16.3210142+08:00",
-            "Source": "extras",
-            "Version": "0.17.1",
-            "Name": "telegram-downloader"
-        },
-        {
-            "Info": "",
             "Updated": "2024-03-10T01:23:41.4677048+08:00",
             "Source": "extras",
             "Version": "1.84.1",
@@ -490,13 +323,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-06-04T09:40:12.3542385+08:00",
-            "Source": "extras",
-            "Version": "1.0.98",
-            "Name": "ventoy"
-        },
-        {
-            "Info": "",
             "Updated": "2024-04-22T21:45:15.269837+08:00",
             "Source": "extras",
             "Version": "3.9.10.19",
@@ -504,31 +330,10 @@
         },
         {
             "Info": "",
-            "Updated": "2024-03-10T01:12:20.9713117+08:00",
-            "Source": "extras",
-            "Version": "1.1.2",
-            "Name": "windirstat"
-        },
-        {
-            "Info": "",
             "Updated": "2024-05-31T22:29:31.0499147+08:00",
             "Source": "main",
             "Version": "1.8.13",
             "Name": "xray"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-05-31T22:29:36.5236615+08:00",
-            "Source": "main",
-            "Version": "2024.05.27",
-            "Name": "yt-dlp"
-        },
-        {
-            "Info": "",
-            "Updated": "2024-05-31T22:29:45.5996372+08:00",
-            "Source": "extras",
-            "Version": "0.7.1",
-            "Name": "zeal"
         },
         {
             "Info": "",
