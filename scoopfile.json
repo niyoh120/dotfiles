@@ -197,13 +197,6 @@
         },
         {
             "Info": "",
-            "Updated": "2024-06-20T15:17:50.5146693+08:00",
-            "Source": "main",
-            "Version": "24.1",
-            "Name": "latex"
-        },
-        {
-            "Info": "",
             "Updated": "2024-05-22T23:26:09.4968293+08:00",
             "Source": "extras",
             "Version": "6.3.0.78",
