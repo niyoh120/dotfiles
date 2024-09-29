@@ -86,7 +86,6 @@ plugins=(
     direnv
     fzf
     fzf-tab
-    poetry
     vagrant
     )
 
