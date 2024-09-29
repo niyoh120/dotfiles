@@ -41,7 +41,8 @@ source_modules \
     python \
     go \
     rust \
-    arch
+    arch \
+    sgpt
 
 source_module post
 
