@@ -2,14 +2,6 @@ Host sg-1
     User root
     HostName 129.226.222.149
 
-Host sg-2
-    User admin
-    HostName 18.141.20.227
-
-Host vn-1
-    User root
-    HostName 103.12.76.123
-
 Host kr-1
     User root
     HostName 146.56.104.82
@@ -30,9 +22,9 @@ Host r5c
     User root
     HostName 192.168.3.254
 
-Host k3s-eq12
+Host coolify
     User root
-    HostName 192.168.3.200
+    HostName 192.168.3.210
 
 Host bt-eq12
     User root
